@@ -6,7 +6,7 @@
 
 ```
 拷贝项目：
-git clone git@git.yypm.com:guojinrong/workflow.git
+git clone git@github.com:JR93/workflow.git
 
 安装依赖项：(由于依赖包较多，此安装过程需要几分钟，请耐心等候...)
 npm install
