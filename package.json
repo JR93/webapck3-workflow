@@ -1,0 +1,70 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "workflow",
+  "scripts": {
+    "test": "webpack --config ./build/webpack.base.js",
+    "dev": "node ./build/devServer.js",
+    "prod": "node ./build/prodServer.js"
+  },
+  "keywords": [
+    "workflow"
+  ],
+  "main": "index.js",
+  "bin": {
+    "fetool": "bin/fetool.js"
+  },
+  "author": "JR",
+  "license": "ISC",
+  "devDependencies": {
+    "assemble-webpack-loader": "0.0.2",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0",
+    "chalk": "^2.3.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "commander": "^2.14.1",
+    "copy-webpack-plugin": "^4.4.2",
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.9.0",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.9",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "glob": "^7.1.2",
+    "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^4.1.0",
+    "node-sass": "^4.7.2",
+    "open-browser-webpack-plugin": "0.0.5",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^2.1.0",
+    "postcss-pxtorem": "^4.0.1",
+    "sass-loader": "^6.0.6",
+    "semver": "^5.5.0",
+    "shelljs": "^0.8.1",
+    "string-replace-loader": "^1.3.0",
+    "style-loader": "^0.20.2",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "url-loader": "^0.6.2",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.11.0",
+    "webpack-dev-middleware": "^2.0.6",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-merge": "^4.1.2",
+    "webpack-spritesmith": "^0.4.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.5.0"
+  }
+}
