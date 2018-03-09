@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "workflow",
   "scripts": {
-    "test": "webpack --config ./build/webpack.base.js",
     "dev": "node ./build/devServer.js",
     "prod": "node ./build/prodServer.js"
   },

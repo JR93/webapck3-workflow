@@ -7,8 +7,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
 
-const babelConfig = require('./babelrc.js');
-const cssMinimizeConfig = require('./cssmin.js');
+const babelConfig = require('./babelrc');
+const cssMinimizeConfig = require('./cssmin');
 const CONFIG = require('../config');
 const env = process.env.NODE_ENV === 'development' ? 'dev' : 'prod';
 const isNeedHash = !!(CONFIG.hash && env === 'prod');

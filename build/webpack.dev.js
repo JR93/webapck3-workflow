@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
-const baseConfig = require('./webpack.base.js');
+const baseConfig = require('./webpack.base');
 const CONFIG = require('../config');
 
 const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true&noInfo=true';

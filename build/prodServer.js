@@ -1,23 +1,27 @@
-require('./check-ver.js')();
+require('./check-ver')();
 const webpack = require('webpack');
 const express = require('express');
-const chalk = require('chalk');
+const logger = require('./logger');
 
 if (!process.env.NODE_ENV) process.env.NODE_ENV = 'production';
 const CONFIG = require('../config');
-const prodConfig = require('./webpack.prod.js');
+const prodConfig = require('./webpack.prod');
+
+logger.info('正在执行 prod 任务...');
 
 webpack(prodConfig, (err) => {
   if (err) {
-    console.log(chalk.red('哎呀~ 出错了：'));
+    logger.error('出现了错误：');
     console.log(err);
   } else {
-    console.log(chalk.green.bold('\n', '打包构建完成~'));
+    console.log();
+    logger.success('打包构建完成~');
+    console.log();
     const app = express();
     const port = CONFIG.port || 8899;
     app.use(express.static(CONFIG.prod.outputPath));
     app.listen(port, () => {
-      console.log(`Server is listening at port ${port}:`);
+      logger.success(`Server is listening at port ${port}:`);
     });
   }
 });

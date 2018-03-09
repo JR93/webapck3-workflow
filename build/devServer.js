@@ -1,16 +1,19 @@
-require('./check-ver.js')();
+require('./check-ver')();
 const path = require('path');
 const webpack = require('webpack');
 const express = require('express');
 const webpackDevMiddile = require('webpack-dev-middleware');
 const webpackHotMiddle = require('webpack-hot-middleware');
+const logger = require('./logger');
 
 if (!process.env.NODE_ENV) process.env.NODE_ENV = 'development';
 const CONFIG = require('../config');
-const devConfig = require('./webpack.dev.js');
+const devConfig = require('./webpack.dev');
 
 const compiler = webpack(devConfig);
 const middleware = [];
+
+logger.info('正在执行 dev 任务...');
 
 const app = express();
 const port = CONFIG.port || 8899;
@@ -35,5 +38,5 @@ middleware.push(webpackHotMiddle(compiler, {
 
 app.use(middleware);
 app.listen(port, () => {
-  console.log(`Server is listening at port ${port}:`);
+  logger.success(`Server is listening at port ${port}:`);
 });

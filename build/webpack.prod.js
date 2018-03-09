@@ -4,8 +4,8 @@ const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const baseConfig = require('./webpack.base.js');
-const cssMinimizeConfig = require('./cssmin.js');
+const baseConfig = require('./webpack.base');
+const cssMinimizeConfig = require('./cssmin');
 const CONFIG = require('../config');
 
 const prodConfig = merge(baseConfig, {
