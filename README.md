@@ -1,6 +1,6 @@
 ## 前端构建工作流
 
-主要使用 webpack3 并搭配 npm scripts 开发的满足日常开发需求和场景的易用工作流。
+主要使用 webpack3 并搭配 npm scripts 开发的满足日常开发需求和场景的易用工作流，支持 jquery/vue/react 三种开发模式。
 
 ### 使用
 
@@ -93,7 +93,13 @@ postcss: {
 
 *type: Boolean*
 
-是否使用vue，默认开启。若不使用vue框架，则将其设为 false 。这样就不会加载vue.js。
+是否使用vue，默认开启。若不使用vue框架，则将其设为 false 。这样就不会加载vue.js。**若使用vue，请记得关闭react选项**
+
+#### react
+
+*type: Boolean*
+
+是否使用react，默认不开启。若使用react框架，则将其设为 true 。同时设置vue选项为false。
 
 #### port
 
@@ -131,27 +137,6 @@ postcss: {
 dev: {
   publicPath: '/',
   outputPath: path.resolve(__dirname, '../dev')
-}
-```
-
-#### test
-
-*type: Object*
-
-配置测试环境下的输出目录和cdn前缀。一般保持为默认值即可。(todo)
-
-##### test.publicPath
-
-默认值： '/'
-
-##### test.outputPath
-
-默认值：path.resolve(__dirname, '../test')
-
-```
-test: {
-  publicPath: '/',
-  outputPath: path.resolve(__dirname, '../test')
 }
 ```
 
