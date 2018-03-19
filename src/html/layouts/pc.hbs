@@ -10,18 +10,5 @@
 <body>
   {% body %}
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  {{#if __DEV__}}
-    {{#if __VUE__}}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
-    {{else}}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    {{/if}}
-  {{else}}
-    {{#if __VUE__}}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
-    {{else}}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    {{/if}}
-  {{/if}}
 </body>
 </html>

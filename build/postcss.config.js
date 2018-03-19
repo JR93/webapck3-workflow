@@ -14,7 +14,6 @@ const postcssConfig = {
         'Android >= 2.3',
         'iOS >= 9'
       ],
-
     }
   }
 }

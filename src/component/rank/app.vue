@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div class="app">
-
+    vue app
   </div>
 </template>
 

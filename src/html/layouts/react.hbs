@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="{{keywords}}">
+  <meta name="description" content="{{description}}">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <meta name="applicable-device" content="mobile">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>{{title}}</title>
+  {{#if __REM__}}
+    {{>flexible}}
+  {{/if}}
+  {{#if __DEV__}}
+    <script src="//res.yy.com/libs/vconsole/3.1.1/vconsole.min.js"></script>
+  {{/if}}
+</head>
+<body>
+  {% body %}
+  <script src="//res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+</body>
+</html>

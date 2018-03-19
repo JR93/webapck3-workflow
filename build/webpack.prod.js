@@ -81,4 +81,16 @@ const prodConfig = merge(baseConfig, {
   ],
 });
 
+if (CONFIG.react) {
+  prodConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
+    name: "vendor",
+    minChunks: (module) => {
+      return module.context && module.context.includes("node_modules");
+    }
+  }), new webpack.optimize.CommonsChunkPlugin({
+    name: "manifest",
+    minChunks: Infinity
+  }));
+}
+
 module.exports = prodConfig;

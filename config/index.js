@@ -16,7 +16,9 @@ module.exports = {
   // 打开浏览器
   open: true,
   // 使用vue
-  vue: true,
+  vue: false,
+  // 使用react
+  react: true,
   // 使用雪碧图
   sprite: false,
   // 指定本地服务端口号，默认8899
@@ -34,13 +36,6 @@ module.exports = {
     publicPath: '/',
     // dest
     outputPath: path.resolve(__dirname, '../dev')
-  },
-  // 测试环境设置
-  test: {
-    // cdn
-    publicPath: '/',
-    // dest
-    outputPath: path.resolve(__dirname, '../test')
   },
   // 生产环境设置
   prod: {

@@ -213,7 +213,7 @@ glob.sync(path.join(__dirname, '../src/html/pages/*.hbs')).forEach((filePath) =>
   }
 
   if (filename in baseConfig.entry) {
-    conf.chunks = [filename];
+    conf.chunks = CONFIG.react ? ['manifest', 'vendor', filename] : [filename];
   }
 
   baseConfig.plugins.push(new HtmlWebpackPlugin(conf));

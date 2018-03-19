@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@import "lib/reset";
+@import "base/mixin";
+// @import "base/font";
+// @import "spritesmith/sprite";
+
+html, body {
+  width: 100%;
+  height: 100%;
+//   font-family: -apple-system, "Helvetica Neue", "Arial", Helvetica, STHeiTi, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none !important;
+}
+#app {
+  font-size: 50px;
+}

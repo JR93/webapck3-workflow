@@ -4,10 +4,15 @@ const eslintConfig = {
   root: true,
   parser: 'babel-eslint',
   parserOptions: {
-    sourceType: 'module'
+    'ecmaVersion': 6,
+    'sourceType': 'module',
+    'ecmaFeatures': {
+        'jsx': true
+    }
   },
   env: {
-    'browser': true
+    'browser': true,
+    'es6': true
   },
   globals: {
     $: true,
@@ -16,17 +21,16 @@ const eslintConfig = {
     __PROD__: true,
     wx: true,
   },
-  extends: 'airbnb-base',
-  plugins: [
-    'html'
-  ],
+  extends: CONFIG.react ? ['airbnb-base', 'plugin:react/recommended'] : 'airbnb-base',
+  plugins: CONFIG.react ? ['html', 'react'] : ['html'],
   rules: {
     'no-console': 0,
     'func-names': 0,
     'import/no-unresolved': 0,
     'import/extensions': 0,
     'import/no-extraneous-dependencies': 0,
-    'linebreak-style': 0
+    'linebreak-style': 0,
+    'class-methods-use-this': 0
   }
 };
 
