@@ -1,7 +1,9 @@
 const CONFIG = require('../config');
 
 const babelRC = {
-  "presets": ["env"],
+  "presets": [["env", {
+    "modules": false
+  }]],
   "plugins": [
     "transform-runtime",
     "syntax-dynamic-import"
