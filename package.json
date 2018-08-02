@@ -10,9 +10,6 @@
     "workflow"
   ],
   "main": "index.js",
-  "bin": {
-    "fetool": "bin/fetool.js"
-  },
   "author": "JR",
   "license": "ISC",
   "devDependencies": {
